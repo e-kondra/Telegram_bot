@@ -1,12 +1,13 @@
-from sqlalchemy import  Column, Boolean, Integer, String, Float, ForeignKey, DateTime
+from sqlalchemy import Column, Boolean, Integer, String, Float, ForeignKey, DateTime
 # model for tables relation
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 
-from models.product import Products
+from product import Products
 
 
 Base = declarative_base()
+
 
 class Orders(Base):
 
@@ -24,3 +25,4 @@ class Orders(Base):
 
     def __str__(self):
         return f'{self.quantity} {self.date}'
+

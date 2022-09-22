@@ -1,7 +1,8 @@
-'''Configurations constants'''
+#  Configurations constants
 
 import os
 from emoji import emojize
+
 
 TOKEN = '5249069244:AAHlatQ05d12aWV9kD1YpFO3X_noS-YWcoM'
 
@@ -11,14 +12,14 @@ VERSION = '0.0.1'
 
 AUTHOR = 'e-kondra'
 
-
+#  path to Base Directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
+#  path to DataBase (DB will be in directory 'settings')
 DATABASE = os.path.join('sqlite:///'+BASE_DIR, NAME_DB)
 
 COUNT = 0
 
-
+#  control buttons
 KEYBOARD = {
     'CHOOSE_GOODS': emojize(':open_file_folder: Выбрать товар'),
     'INFO': emojize(':speech_balloon: О магазине'),
