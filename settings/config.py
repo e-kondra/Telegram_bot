@@ -3,7 +3,8 @@
 import os
 from emoji import emojize
 
-
+# for remembering! buba_bot (bot's name )
+# t.me/evilldead_bot (bot's username)
 TOKEN = '5249069244:AAHlatQ05d12aWV9kD1YpFO3X_noS-YWcoM'
 
 NAME_DB = 'products.sqlite'

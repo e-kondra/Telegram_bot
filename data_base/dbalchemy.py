@@ -1,7 +1,7 @@
 class Singletone(type):
     '''
     Pattern, creating only one object of class
-    and give global access point to it
+    and giving global access point to it
     '''
     def __init__(cls, name, bases, attrs, **kwargs):
         super().__init__(name, bases, attrs)
