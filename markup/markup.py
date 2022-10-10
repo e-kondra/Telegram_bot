@@ -1,7 +1,7 @@
 '''Form marking of interface elements'''
 
 # special types of 'pyTelegramBotAPI' for elements of interface creation
-from telebot.types import KeyboardButton, ReplyKeyboardMarkup
+from telebot.types import KeyboardButton, ReplyKeyboardMarkup, ReplyKeyboardRemove
 
 from data_base.dbalchemy import DBManager
 from settings import config
@@ -44,3 +44,18 @@ class Keyboards:
         self.markup.row(itm_btn_1)
         return self.markup
 
+    def category_menu(self):
+        """
+        create new markup in category menu
+        :return: markup
+        """
+        self.markup = ReplyKeyboardMarkup(True, True, row_width=1)
+        self.markup.add(self.set_btn('SEMIPRODUCT'))
+        self.markup.add(self.set_btn('GROCERY'))
+        self.markup.add(self.set_btn('ICE_CREAM'))
+        self.markup.row(self.set_btn('<<'), self.set_btn('ORDER'))
+        return self.markup
+
+    def remove_menu(self):
+        # remove menu
+        return ReplyKeyboardRemove()

@@ -13,6 +13,12 @@ class HandlerAllText(Handler):
         # orders step
         self.step = 0
 
+    def press_btn_category(self, message):
+        self.bot.send_message(message.chat.id, 'Catalog of categories',
+                              reply_markup=self.keybords.remove_menu())
+        self.bot.send_message(message.chat.id, 'Please make your choice',
+                              reply_markup=self.keybords.category_menu())
+
     def press_btn_info(self, message):
         self.bot.send_message(message.chat.id, MESSAGES['trading_store'],
                               parse_mode='HTML',
@@ -29,6 +35,9 @@ class HandlerAllText(Handler):
     def handle(self):
         @self.bot.message_handler(func=lambda message: True)
         def handle(message):
+            if message.text == config.KEYBOARD['CHOOSE_GOODS']:
+                self.press_btn_category(message)
+
             if message.text == config.KEYBOARD['INFO']:
                 self.press_btn_info(message)
 
