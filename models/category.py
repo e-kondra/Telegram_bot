@@ -1,8 +1,8 @@
 from sqlalchemy import Column, String, Boolean, Integer
-# class - constructor for working with declarative style
-from sqlalchemy.ext.declarative import declarative_base
+
+
 # init declarative style
-Base = declarative_base()
+from data_base.dbcore import Base
 
 
 class Category(Base):

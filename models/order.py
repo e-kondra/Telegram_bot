@@ -1,12 +1,10 @@
 from sqlalchemy import Column, Boolean, Integer, String, Float, ForeignKey, DateTime
 # model for tables relation
 from sqlalchemy.orm import relationship, backref
-from sqlalchemy.ext.declarative import declarative_base
+
 
 from product import Products
-
-
-Base = declarative_base()
+from data_base.dbcore import Base
 
 
 class Orders(Base):

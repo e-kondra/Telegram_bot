@@ -7,7 +7,7 @@ from emoji import emojize
 # t.me/evilldead_bot (bot's username)
 TOKEN = '5249069244:AAHlatQ05d12aWV9kD1YpFO3X_noS-YWcoM'
 
-NAME_DB = 'products.sqlite'
+NAME_DB = 'products.db'
 
 VERSION = '0.0.1'
 
@@ -22,17 +22,17 @@ COUNT = 0
 
 #  control buttons
 KEYBOARD = {
-    'CHOOSE_GOODS': emojize(':open_file_folder: Выбрать товар'),
-    'INFO': emojize(':speech_balloon: О магазине'),
-    'SETTINGS': emojize('⚙️ Настройки'),
-    'SEMIPRODUCT': emojize(':pizza: Полуфабрикаты'),
-    'GROCERY': emojize(':bread: Бакалея'),
-    'ICE_CREAM': emojize(':shaved_ice: Мороженое'),
+    'CHOOSE_GOODS': emojize(':open_file_folder: Select product'),
+    'INFO': emojize(':speech_balloon: ABOUT'),
+    'SETTINGS': emojize('⚙️ TUNES'),
+    'SEMIPRODUCT': emojize(':pizza: SEMIPRODUCT'),
+    'GROCERY': emojize(':bread: GROCERY'),
+    'ICE_CREAM': emojize(':shaved_ice: ICE_CREAM'),
     '<<': emojize('⏪'),
     '>>': emojize('⏩'),
     'BACK_STEP': emojize('◀️'),
     'NEXT_STEP': emojize('▶️'),
-    'ORDER': emojize('✅ ЗАКАЗ'),
+    'ORDER': emojize('✅ Order'),
     'X': emojize('❌'),
     'DOUWN': emojize('🔽'),
     'AMOUNT_PRODUCT': COUNT,

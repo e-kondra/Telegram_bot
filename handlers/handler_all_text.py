@@ -32,6 +32,13 @@ class HandlerAllText(Handler):
     def press_btn_back(self, message):
         self.bot.send_message(message.chat.id, "You're back", reply_markup=self.keybords.start_menu())
 
+    def press_btn_product(self, message, category):
+        self.bot.send_message(message.chat.id,
+                              "Category" + config.KEYBOARD[category],
+                              reply_markup=self.keybords.set_select_category(config.CATEGORY[category]))
+        self.bot.send_message(message.chat.id, 'Ok',
+                              reply_markup=self.keybords.category_menu())
+
     def handle(self):
         @self.bot.message_handler(func=lambda message: True)
         def handle(message):
@@ -47,3 +54,12 @@ class HandlerAllText(Handler):
             if message.text == config.KEYBOARD['<<']:
                 self.press_btn_back(message)
 
+            # products
+            if message.text == config.KEYBOARD['SEMIPRODUCT']:
+                self.press_btn_product(message, 'SEMIPRODUCT')
+
+            if message.text == config.KEYBOARD['GROCERY']:
+                self.press_btn_product(message, 'GROCERY')
+
+            if message.text == config.KEYBOARD['ICE_CREAM']:
+                self.press_btn_product(message, 'ICE_CREAM')
