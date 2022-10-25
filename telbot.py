@@ -32,6 +32,7 @@ class TelBot:
 
 
 if __name__ == '__main__':
-
+    t = ()
+    print(type(t))
     bot = TelBot()
     bot.run_bot()

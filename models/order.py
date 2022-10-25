@@ -2,13 +2,11 @@ from sqlalchemy import Column, Boolean, Integer, String, Float, ForeignKey, Date
 # model for tables relation
 from sqlalchemy.orm import relationship, backref
 
-
-from product import Products
+from models.product import Products
 from data_base.dbcore import Base
 
 
 class Orders(Base):
-
     __tablename__ = 'orders'
 
     id = Column(Integer, primary_key=True)

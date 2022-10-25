@@ -62,6 +62,7 @@ class Keyboards:
 
     def set_inline_button(self, name):
         # create and return inline button by name
+        print('set_inline_button')
         return InlineKeyboardButton(str(name), callback_data=str(name.id))
 
     def set_select_category(self, category):

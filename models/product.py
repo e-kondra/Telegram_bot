@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship, backref
 from models.category import Category
 from data_base.dbcore import Base
 
+
 class Products(Base):
 
     __tablename__ = 'products'
